@@ -1,6 +1,6 @@
 axios({
   method: "get",
-  url: `http://api.openweathermap.org/data/2.5/weather?q=Riyadh&units=metric&APPID=e33801499993a423831b424478d9abd4`
+  url: `https://api.openweathermap.org/data/2.5/weather?q=Riyadh&units=metric&APPID=e33801499993a423831b424478d9abd4`
 })
   .then(Response => {
     console.log(Response.data.weather[0].icon);
@@ -10,7 +10,7 @@ axios({
     let img = document.createElement("IMG");
     img.setAttribute(
       "src",
-      `http://openweathermap.org/img/w/${Response.data.weather[0].icon}.png`
+      `https://openweathermap.org/img/w/${Response.data.weather[0].icon}.png`
     );
     let icon = document.querySelector(".icon").append(img);
   })
